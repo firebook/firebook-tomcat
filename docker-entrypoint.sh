@@ -56,8 +56,7 @@ if [ "$1" = 'mysqld' ]; then
         chown -R mysql:mysql "$DATADIR"
 fi
 
-if [ "$1" = 'tomcat' ]; then
-	catalina.sh run
-fi
+# Start Tomcat
+catalina.sh run
 
 exec "$@"
